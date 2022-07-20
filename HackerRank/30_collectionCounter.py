@@ -66,26 +66,24 @@ Customer 6: Size 10 not available, so no purchase.
 Total money earned = 200
 '''
 
-
 # Enter your code here. Read input from STDIN. Print output to STDOUT
-def findtoalprice(N, C):
-    from collections import Counter
-    newlist = Counter(N)
-    # print(newlist)
-    total_amount = 0
-
-    for _ in range(C):
-        S, M = list(map(int, input("Enter Shoe Size and Amount: ").split(' ')))
-        if (2 < S < 20) and (20 < M < 100):
-            if S in newlist.keys():
-                if newlist[S] != 0:
-                    total_amount += M
-                    newlist[S] = newlist[S] - 1
-    print("Total Price"+total_amount)
-
-
 if __name__ == '__main__':
-    X = int(input("Enter No Of Shoes: "))
-    N = list(map(int, input("Enter available Shoe Sizes: ").split(' ')))
-    C = int(input("Enter No Of Customers: "))
-    findtoalprice(N, C)
+    from collections import Counter
+
+    n = int(input("Enter No Of Shoes: "))
+    s = Counter(map(int, input("Enter Shoes Sizes: ").split()))
+    x = int(input("No Of Customers: "))
+    print("Counter Dict: ", s)
+    total = []
+
+    for i in range(x):
+        a, b = map(int, input("Enter Shoe Size and Amount for Cust-"+str(i+1)+" :").split())
+        if s[a] > 0:
+            total.append(b)
+            s.subtract(Counter([a]))
+            print("Counter Dict: ", s)
+            print(total)
+        else:
+            pass
+
+    print(sum(total))
