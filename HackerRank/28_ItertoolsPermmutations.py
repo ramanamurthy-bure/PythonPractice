@@ -67,19 +67,19 @@ All possible size 2  permutations of the string "HACK" are printed in lexicograp
 
 # Enter your code here. Read input from STDIN. Print output to STDOUT
 from itertools import permutations
-s,size = input().split(" ")
-size = int(size)
-#print(s)
-#print(int(size))
 
-#0<size<=len(s)
+s, size = input().split(" ")
+size = int(size)
+# print(s)
+# print(int(size))
+
+# 0<size<=len(s)
 s = sorted(s)
-if size >0 and size<=len(s):
+if 0 < size <= len(s):
     print("*************************Approch-1****************************")
-    #print(list(permutations(s,size)))
-    for _ in list(permutations(s,size)):
+    # print(list(permutations(s,size)))
+    for _ in list(permutations(s, size)):
         print("".join(_))
 
-
 print("*************************Approch-2****************************")
-print(*[''.join(i) for i in permutations(sorted(s),int(size))],sep='\n')
+print(*[''.join(i) for i in permutations(sorted(s), int(size))], sep='\n')

@@ -59,18 +59,17 @@ def merge_the_tools(S, k):
     print("*************************Approch-1****************************")
     for i in range(0, len(S), k):
         uniq = ''
-        for c in S[i : i+k]:
-            if (c not in uniq):
-                uniq+=c
+        for c in S[i: i + k]:
+            if c not in uniq:
+                uniq += c
         print(uniq)
-
 
 
 def merge_the_tools1(S, k):
     print("*************************Approch-2****************************")
     for part in zip(*[iter(S)] * k):
         d = dict()
-        print(''.join([ d.setdefault(c, c) for c in part if c not in d ]))
+        print(''.join([d.setdefault(c, c) for c in part if c not in d]))
 
 
 if __name__ == '__main__':

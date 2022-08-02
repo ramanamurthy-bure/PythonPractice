@@ -56,7 +56,7 @@ Test against custom input
 
 '''
 
-#!/bin/python3
+# !/bin/python3
 
 import math
 import os
@@ -64,19 +64,16 @@ import random
 import re
 import sys
 
+
 # Complete the solve function below.
 def solve(s):
-    if len(s)>0 and len(s) < 1000 :
-        s1=[x.capitalize() for x in s.split(" ")]
+    if 0 < len(s) < 1000:
+        s1 = [x.capitalize() for x in s.split(" ")]
         return " ".join(s1)
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
-
     s = input()
-
     result = solve(s)
-
     fptr.write(result + '\n')
-
     fptr.close()

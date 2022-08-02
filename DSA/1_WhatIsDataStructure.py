@@ -1,7 +1,7 @@
 # Data structures are building blocks for any software programs. One can't become a good
 # programmer without sound understanding of data structure
 # We need to use right data structure for given problem
-# Example :Array, Lnked-List, Tree
+# Example :Array, Linked-List, Tree
 # They are containers storing data in a specific memory layout
 """
 ################################################################################################################

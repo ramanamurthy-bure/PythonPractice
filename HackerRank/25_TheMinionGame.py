@@ -62,7 +62,7 @@ def minion_game(s1):
     Kevin = 0
     voweletters = "AEIOU"
 
-    if len(s1) > 0 and len(s1) <= math.pow(10, 6):
+    if 0 < len(s1) <= math.pow(10, 6):
         for i in range(len(s1)):
             charval = s1[i]
             if charval not in voweletters:

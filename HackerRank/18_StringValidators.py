@@ -34,7 +34,7 @@ This method checks if all the characters of a string are uppercase characters (A
 
 print 'ABCD123#'.isupper()
 True
->>> print 'Abcd123#'.isupper()
+ print 'Abcd123#'.isupper()
 False
 Task
 
@@ -71,7 +71,7 @@ True
 if __name__ == '__main__':
     s = input()
 
-    if 0 < len(s) and len(s) < 1000:
+    if 0 < len(s) < 1000:
 
         if len([x for x in s if x.isalnum()]) > 0:
             print("True")

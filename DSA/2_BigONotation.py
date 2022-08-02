@@ -3,6 +3,7 @@ Measuring Running Time Growth - Time Complexity
 ################################################################################################################
 Big O Notation is used to measure how running time or space requirements for your program grows as input
 size grows.
+
 1. O(n)
 def foo(arr):
     pass
@@ -30,7 +31,9 @@ Examples:
     print(getSquaredNos(numbers))
 
     For this example the time complexity is Order of N -> Bog O(n)
-    -> Here the program time increases bases on the input
+    -> Here the program time increases based on the input
+
+
 
 ################################################################################################################
 2. O(1)
@@ -68,9 +71,9 @@ Examples:
                 print(numbers[i] +" is  a duplicate")
                 break
 
-    -> IN this example for loop runs 2 times so O(n square)
+    -> In this example for loop runs 2 times so O(n square)
 
-time = a * n square + b (a cross n plus b)
+time = a * n square +(a cross n plus b)
 
 Rules:
     1. Keep the fastest growing term

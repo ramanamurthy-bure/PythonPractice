@@ -181,7 +181,7 @@ def print_formatted(number):
     # your code goes here
     w = len(str(bin(number)).replace('0b', ''))
 
-    if (number >= 1 and number <= 99):
+    if 1 <= number <= 99:
         for i in range(1, number + 1):
             a = str(int(i)).replace('0o', '').replace('0b', '').replace('0x', '').rjust(w, ' ')
             b = str(oct(i)).replace('0o', '').replace('0b', '').replace('0x', '').rjust(w, ' ')

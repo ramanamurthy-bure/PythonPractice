@@ -66,18 +66,19 @@ def diagonalDifference(arr):
     diag1 = 0
     diag2 = 0
     n = len(arr)
-    #print(n)
+    # print(n)
     for i in range(n):
         for j in range(n):
             if i == j:
                 print(arr[i][j])
                 diag1 += arr[i][j]
-            if j == n-i-1:
+            if j == n - i - 1:
                 print(arr[i][j])
                 diag2 += arr[i][j]
-    #print(diag1)
-    #print(diag2)
+    # print(diag1)
+    # print(diag2)
     return abs(diag1 - diag2)
+
 
 if __name__ == '__main__':
     n = int(input().strip())

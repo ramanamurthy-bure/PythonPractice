@@ -66,7 +66,7 @@ import textwrap
 def wrap(string, max_width):
     len_of_string = len(string)
 
-    if (len_of_string > 0 and len_of_string < 1000) and ((max_width > 0 and max_width < len_of_string)):
+    if (0 < len_of_string < 1000) and (0 < max_width < len_of_string):
         count_val = 0
         wraptext = ""
         for x in string:
